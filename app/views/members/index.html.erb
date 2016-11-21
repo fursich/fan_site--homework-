@@ -2,10 +2,14 @@
 
 <% @members.each do |member| %>
 
-<img src="<% member.image_url %>">
-<p>
-<%= member.family_name %> <%= member.given_name %>
-</p>
+<a href = "/members/<%= member.id %>">
+    <img src="<%= member.img_url %>">
+    <p>
+        <%= member.family_name %> <%= member.given_name %>
+    </p>
+
+</a>
+
 
 <% end %>
 
